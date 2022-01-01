@@ -1,0 +1,36 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+
+<form method="post"><table align="center" border="1"cellspacing="3"cellpadding="7">
+	<caption><h3>View Accepted List</h3></caption><tr>
+	<td>Id</td>
+	<td>Name</td>
+	<td>Address</td>
+	<td>Phone</td>
+	<td>Pin</td>
+	<td>email</td>
+	
+</tr>
+    {% if objval %}
+        {% for obj in objval %}
+
+             <tr>
+                <td>{{ obj.uid }}</td>
+                <td>{{ obj.name }}</td>
+                <td>{{ obj.address }}</td>
+                <td>{{ obj.phone }}</td>
+                <td>{{ obj.pin }}</td>
+                <td>{{ obj.email }}</td>
+                <td><a href="{% url 'update' cid=obj.cid %}">Update</a> </td>
+               <td><a href="{% url 'delete' cid=obj.cid %}">Delete</a> </td>
+              </tr>
+
+        {% endfor %}
+    {% endif %}
+
+</table></form>
+	
+
+
+
+{% endblock %}

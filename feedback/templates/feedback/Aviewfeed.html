@@ -1,0 +1,34 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+
+<form method="post">
+<h3>View Feedback</h3>
+    <table align="center" class="table">
+	<caption></caption>
+    <tr>
+	<td>Id</td>
+	<td>Date</td>
+	<td>Feedback</td>
+	
+</tr>
+
+    {% if objval %}
+        {% for obj in objval %}
+
+             <tr>
+                <td>{{ obj.fid }}</td>
+                <td>{{ obj.date }}</td>
+                <td>{{ obj.feedback }}</td>
+             </tr>
+
+        {% endfor %}
+    {% endif %}
+
+</table></form>
+	
+
+
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+
+
+<form method="post">
+    {% csrf_token %}
+	<table align="center"><caption>CORPERATION LEVEL REGISTRATION/MANAGE</caption>
+		<tr>
+            <td>Name:</td>
+			<td><input type="text" name="aname" value="{{ objval.name }}"></td>
+		</tr>
+		<tr>
+            <td>Address:</td>
+			<td><textarea rows="5" cols="12" name="aaddress">{{ objval.address }}</textarea></td>
+		</tr>
+		<tr>
+			<td>Phone No:</td>
+			<td><input type="text" name="aphone" value="{{ objval.phone }}"></td>
+		</tr>
+		<tr>
+            <td>Pin No:</td>
+			<td>
+				<input type="text" name="apin" value="{{ objval.pin }}">
+			</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="text" name="aemail" value="{{ objval.email }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="aup" value="Update">
+			</td>
+        </tr>
+	</table>
+</form>
+{% endblock %}

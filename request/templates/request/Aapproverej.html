@@ -1,0 +1,29 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+<h3>Approve/Reject request of fund</h3>
+<form method="post">
+    <table>
+	<tr>
+	<td>Type</td>
+	<td>Request Id</td>
+	<td>User</td>
+	<td>Amount</td>
+	<td>Approve</td>
+	<td>Reject</td>
+</tr>
+    {% if objval %}
+        {% for obj in objval %}
+
+             <tr>
+                <td>{{ obj.tof }}</td>
+                <td>{{ obj.rid }}</td>
+                <td>{{ obj.ruser }}</td>
+                <td>{{ obj.amt }}</td>
+              </tr>
+
+        {% endfor %}
+    {% endif %}
+</table></form>
+
+
+{% endblock %}

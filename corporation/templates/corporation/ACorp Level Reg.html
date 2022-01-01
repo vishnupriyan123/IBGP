@@ -1,0 +1,43 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+
+
+<form method="post">
+    {% csrf_token %}
+	<table align="center"><h3>CORPERATION LEVEL REGISTRATION/MANAGE</h3>
+
+		<tr><td>Name:</td>
+			<td><input type="text" name="aname" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><textarea rows="5" cols="12" name="aaddress" class="form-control"></textarea></td>
+		</tr>
+		<tr>
+			<td>Phone No:</td>
+			<td><input type="text" name="aphone" class="form-control"></td>
+		</tr>
+		<tr><td>Pin No:</td>
+			<td>
+				<input type="text" name="apin" class="form-control">
+			</td>
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input type="text" name="aemail" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="areg" value="Register"  class="btn btn-success">
+			</td>
+
+        </tr>
+	</table>
+</form>
+
+{% endblock %}

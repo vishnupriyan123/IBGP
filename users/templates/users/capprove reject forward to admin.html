@@ -1,0 +1,31 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+
+
+<form method="post"><table align="center" border="1"cellspacing="3"cellpadding="7">
+	<h3>Approve/Reject request of fund and forward to admin</h3><tr>
+	<td>Type</td>
+	<td>Request Id</td>
+	<td>User</td>
+	<td>Amount</td>
+	<td>Approve</td>
+	<td>Reject</td>
+	<td>Forward</td>
+</tr>
+    {% if objval %}
+        {% for obj in objval %}
+
+             <tr>
+                <td>{{ obj.uid }}</td>
+                <td>{{ obj.type }}</td>
+                <td>{{ obj.reqid }}</td>
+                <td>{{ obj.user }}</td>
+                <td>{{ obj.type }}</td>
+             </tr>
+
+        {% endfor %}
+    {% endif %}
+</table></form>
+	
+
+{% endblock %}

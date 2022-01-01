@@ -1,0 +1,51 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+
+
+<form method="post">
+    {% csrf_token %}
+	<table align="center"><h2>Transfer Fund to Corporation</h2></>
+		<tr>
+			<td>
+				Fund Type:
+			</td>
+			<td>
+				<select name="afundt"><option>Housing</option></select>
+			</td>
+				</tr>
+				<tr>
+					<td>
+						Amount:
+					</td>
+					<td><input type="text" name="aamt" class="form-control"></td>
+					</tr>
+					<tr><td>
+						Transfer Id:
+					</td>
+					<td><input type="text" name="aID" class="form-control">
+				</tr>
+				<tr>
+					<td>
+						Account no:
+					</td>
+					<td><input type="text" name="accno" class="form-control"></td>
+					</tr>
+					<tr>
+					<td>
+						Bank Name:
+					</td>
+					<td><input type="text" name="abname" class="form-control"></td>
+					</tr>
+					<tr>
+					<td>
+						Branch:
+					</td>
+					<td><input type="text" name="abranch" class="form-control"></td>
+					</tr>
+                    <tr>
+					<td><input type="submit" value="Proceed" class="btn btn-danger"></td>
+					</tr>
+
+    </table>
+</form>
+{% endblock %}
